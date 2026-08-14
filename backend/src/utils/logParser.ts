@@ -1,4 +1,4 @@
-import {LogLine} from '../types/index'
+import {LogLine} from '../types/index.js'
 
 // Apache/Nginx Combined Log Format:
 // 192.168.1.1 - - [27/Jul/2026:14:23:01 +0000] "GET /index.html HTTP/1.1" 200 512
