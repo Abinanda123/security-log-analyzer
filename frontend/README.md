@@ -1,32 +1,51 @@
-# React + TypeScript + Vite
+# Security Log Analyzer - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is the frontend application for the **Security Log Analyzer**, built to provide an interactive and responsive dashboard for visualizing web access logs and detecting security threats.
 
-Currently, two official plugins are available:
+## 🛠 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Charts:** [Recharts](https://recharts.org/)
+- **HTTP Client:** [Axios](https://axios-http.com/)
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install dependencies**
+   Ensure you are in the `frontend` directory, then run:
+   ```bash
+   npm install
+   ```
 
-## Expanding the Oxlint configuration
+2. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   The application will be accessible at `http://localhost:5173` (or the port specified by Vite).
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📜 Available Scripts
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Starts the Vite development server with Hot Module Replacement (HMR). |
+| `npm run build` | Compiles TypeScript and creates an optimized production build in the `dist` folder. |
+| `npm run preview` | Boots up a local static web server that serves the files from `dist` to preview the production build. |
+| `npm run lint` | Runs [Oxlint](https://oxc.rs/) to check code quality and catch errors quickly. |
+
+## 📁 Directory Structure
+
+```text
+frontend/
+├── public/               # Static assets that bypass Vite's build pipeline
+├── src/                  # React source components, pages, and utilities
+├── index.html            # Main HTML entry point
+├── package.json          # Frontend dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+└── vite.config.ts        # Vite configuration
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 📝 Notes
+
+For full project documentation, architecture details, and backend setup, please refer to the [root README.md](../README.md).
